@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  demo-spb-rest:
+    build: ./DockerDemo
+    image: leo/demo-spb-rest:0.0.1
+    ports:
+      - 8080:8080
+    restart: always
+    networks:
+      - test-network
+networks: 
+    test-network:
